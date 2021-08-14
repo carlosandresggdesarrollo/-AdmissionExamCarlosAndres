@@ -1,18 +1,4 @@
-<!--
-=========================================================
-* Argon Dashboard - v1.2.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
 
-
-* Copyright  Creative Tim (http://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
-
-
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html>
 
@@ -52,10 +38,7 @@
             <li class="nav-item">
               <a class="nav-link" href="index.php">
                 <span class="nav-link-text">Welcome</span>
-              </a>
-          
-            
-            
+              </a>   
           </ul>
         </div>
       </div>
@@ -83,8 +66,7 @@
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
               <h6 class="h2 text-white d-inline-block mb-0">Admission Exam</h6>              
-            </div>
-            
+            </div>            
           </div>
         </div>
       </div>
@@ -95,12 +77,47 @@
         <div class=" col ">
           <div class="card">
             <div class="card-header bg-transparent">
-              <h3 class="mb-0">Admission Exam</h3>
+              <h1 class="mb-0">Admission Exam</h1>   
+              <!-- Button trigger modal -->
+              <button type="button" id="new-record" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                New Record
+              </button>         
+              <button type="button" id="new-record" class="btn btn-primary" data-toggle="modal" data-target="#Modaltruck">
+                New truck
+              </button>        
+              
+              <br>  <br>
+              
+              <div class="table-responsive">
+                <!-- Projects table -->
+                <table class="table align-items-center table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Code</th>
+                      <th scope="col">weight</th>
+                      <th scope="col">MilkProduct</th>
+                      <th scope="col">Delete</th>
+                      <th scope="col">update</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-select">
+                  
+                  </tbody>
+                </table>
+              </div>
             </div>
+           
+
+            
+           
             
           </div>
         </div>
       </div>
+
+      <!-- Modal -->
+      <?php include("ModalFrom.php");?>
+      <?php include("Modaltruck.php");?>
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
@@ -129,6 +146,8 @@
       </footer>
     </div>
   </div>
+
+ 
   <!-- Argon Scripts -->
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -140,6 +159,7 @@
   <script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
+  <script src="Script_js/main.js"></script>
 </body>
 
 </html>
